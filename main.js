@@ -12,10 +12,27 @@
 
 let todoList = {
 	todos: ['item1', 'item2', 'item3', 'tiem4'],
+	
 	displayTodos: function() {
 		console.log(this.todos);
+	},
+
+	addTodo: function(todo) {
+		this.todos.push(todo);
+		this.displayTodos();
+	},
+
+	updateTodo: function(position, newValue){
+		this.todos[position] = newValue;
+		this.displayTodos();
+	},
+
+	deleteTodo: function(position){
+		this.todos.splice(position, 1);
+		this.displayTodos();
 	}
 }
 
-console.log("Display todos Object", "================");
+console.log("================Display Todos Object================");
+console.log(todoList.displayTodos());
 
