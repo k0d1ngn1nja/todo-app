@@ -1,38 +1,21 @@
-/* Version Two
+'use strict';
+/* Version Three
 	 Requirements:
-		=> It should have a function display todos
-		=> It should have a function to add new todo
-		=> It should have a function to change a todo
-		=> It should have a function to delete a todo
+		=> It should store the todos array on an object
+		=> It should have a display Todos method
+		=> It should have an addTodo method
+		=> It should have an updateTodo method
+		=> It should have a deleteTodo method
 */
 
 // SOLUTION
 
-let todos = ['item1', 'item2', 'item3', 'tiem4'];
+let todoList = {
+	todos: ['item1', 'item2', 'item3', 'tiem4'],
+	displayTodos: function() {
+		console.log(this.todos);
+	}
+}
 
-console.log("Display todos function", "================");
+console.log("Display todos Object", "================");
 
-function displayTodos(){
-	console.log(todos);
-};
-
-console.log("Add todo function", "================");
-
-function addTodo(todo){
-	todos.push(todo);
-	displayTodos();
-};
-
-console.log("Updating a todo function", "================");
-
-function updateTodo(position, newValue){
-	todos[position] = newValue;
-	displayTodos();
-};
-
-console.log("Deleting a todo function", "================");
-
-function deleteTodo(position){
-	todos.splice(position, 1);
-	displayTodos();
-};
