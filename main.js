@@ -1,36 +1,38 @@
-/* Version One
+/* Version Two
 	 Requirements:
-		=> It should have a way to store todos
-		=> It should have a way to display todos
-		=> It should have a way to add new todo
-		=> It should have a way to change a todo
-		=> It should have a way to delete a todo
+		=> It should have a function display todos
+		=> It should have a function to add new todo
+		=> It should have a function to change a todo
+		=> It should have a function to delete a todo
 */
 
 // SOLUTION
 
-let todos = [];
-console.log(todos);
+let todos = ['item1', 'item2', 'item3', 'tiem4'];
 
-console.log("Add todo:", "================");
+console.log("Display todos function", "================");
 
-todos.push('first todo item'); //adds a new todo to the end of the list/array
-console.log(todos);
+function displayTodos(){
+	console.log(todos);
+};
 
-console.log("Update todo:", "================");
+console.log("Add todo function", "================");
 
-todos[0] = "updated 1st item"; //updating a todo
-console.log(todos);
+function addTodo(todo){
+	todos.push(todo);
+	displayTodos();
+};
 
-console.log("Delete todo:", "================");
+console.log("Updating a todo function", "================");
 
-todos.push('item2');
-todos.push('item3');
-todos.push('item4');
-console.log(todos);
+function updateTodo(position, newValue){
+	todos[position] = newValue;
+	displayTodos();
+};
 
-todos.splice(0,1); //splice(start-position, number-of-items-to-delete) and returns the item deleted
-console.log(todos);
+console.log("Deleting a todo function", "================");
 
-todos.splice(2,1); 
-console.log(todos);
+function deleteTodo(position){
+	todos.splice(position, 1);
+	displayTodos();
+};
