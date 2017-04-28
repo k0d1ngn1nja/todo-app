@@ -20,6 +20,17 @@ let todoList = {
 			completed: false
 		});
 		this.displayTodos();
+	},
+
+	updateTodo: function(position, todoText){
+		this.todos[position].todoText = todoText;
+		this.displayTodos();
+	},
+	
+	toggleCompleted: function(position){
+		let todo = this.todos[position];
+		todo.completed = !todo.completed;
+		this.displayTodos();
 	}
 }
 
