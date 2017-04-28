@@ -1,34 +1,24 @@
 'use strict';
-/* Version Three
+/* Version Four
 	 Requirements:
-		=> It should store the todos array on an object
-		=> It should have a display Todos method
-		=> It should have an addTodo method
-		=> It should have an updateTodo method
-		=> It should have a deleteTodo method
+		=> todoList.addTodo should add objects
+		=> todoList.updatedTodo should change todoText property
+		=> todoList.toggleCompleted should change the completed property
 */
 
 // SOLUTION
-
 let todoList = {
-	todos: ['item1', 'item2', 'item3', 'tiem4'],
+	todos: [],
 	
 	displayTodos: function() {
 		console.log(this.todos);
 	},
 
-	addTodo: function(todo) {
-		this.todos.push(todo);
-		this.displayTodos();
-	},
-
-	updateTodo: function(position, newValue){
-		this.todos[position] = newValue;
-		this.displayTodos();
-	},
-
-	deleteTodo: function(position){
-		this.todos.splice(position, 1);
+	addTodo: function(todoText) {
+		this.todos.push({
+			todoText: todoText,
+			completed: false
+		});
 		this.displayTodos();
 	}
 }
