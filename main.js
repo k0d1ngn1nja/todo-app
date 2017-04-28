@@ -8,12 +8,16 @@
 
 // SOLUTION
 let todoList = {
-	todos: [],
+	todos: [{todoText: 'item1', completed: false}, {todoText: 'item2', completed: true}, {todoText: 'item3', completed: false}],
 	
 	displayTodos: function() {
 		if(this.todos.length > 0){
 			this.todos.forEach( function(todo) {
-				console.log(todo.todoText);
+				if(todo.completed === true){
+					console.log(`(X) ${todo.todoText}`);
+				} else{
+					console.log(`( ) ${todo.todoText}`);
+				}
 			});	
 		} else {
 			console.log("Your todo list is empty!");
