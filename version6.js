@@ -1,19 +1,17 @@
 'use strict';
-/* Version Five
+/* Version Four
 	 Requirements:
-		=> displayTodos should show todoText
-		=> displayTodos should tell you if todos is empty
-		=> displayTodos should show completed
+		=> todoList.addTodo should add objects
+		=> todoList.updatedTodo should change todoText property
+		=> todoList.toggleCompleted should change the completed property
 */
 
 // SOLUTION
 let todoList = {
-	todos: [{todoText: 'item1', completed: false}, {todoText: 'item2', completed: true}],
+	todos: [],
 	
 	displayTodos: function() {
-		this.todos.forEach( function(todo) {
-			console.log(todo.todoText);
-		});
+		console.log(this.todos);
 	},
 
 	addTodo: function(todoText) {
@@ -37,5 +35,5 @@ let todoList = {
 }
 
 console.log("================Display Todos Object================");
-todoList.displayTodos();
+console.log(todoList.displayTodos());
 
