@@ -6,10 +6,43 @@
   <title>ToDo App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <!-- 
+		Requirements:
+			=> There should be a display todos button and a toggleAll button in the app
+			=> Clicking displayAll todos should run todoList.displayTodos
+			=> Clicking toggleAll should run todoList.toggleAll
+   -->
+  <div class="container">
+   	<div class="row">
+   		<div class="col-sm-12">
+   			<div class="user-input-section">
+   				<button class="btn btn-primary" id="displaytodoBtn">Display Todos</button>
+   				<button class="btn btn-info" id="toggleAllBtn">Toggle All</button>
+   			</div>
+   		</div><!--/col12-->
+   	</div><!--/row-->
+		
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="todo-display-box">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Todo</th>
+								<th>Status</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+			</div>
+		</div><!--/row-->
+  </div><!--/container-->
+
   <script src="main.js"></script>
 </body>
 </html>

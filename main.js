@@ -1,11 +1,5 @@
 'use strict';
-/* Version Six
-	 Requirements:
-		=> toggleAll: If everything's true, make everything false
-		=> toggleAll: Otherwise, make everything true.
-*/
 
-// SOLUTION
 let todoList = {
 	todos: [{todoText: 'item1', completed: true}, {todoText: 'item2', completed: true}, {todoText: 'item3', completed: true}],
 	
@@ -64,10 +58,17 @@ let todoList = {
 			}
 		}
 			
-		this.displayTodos();
+		// this.displayTodos();
 	}
 };
 
-console.log("================Display Todos Object================");
-todoList.displayTodos();
+const displayTodosBtn = document.getElementById("displaytodoBtn");
+const toggleAllBtn = document.getElementById("toggleAllBtn");
 
+displayTodosBtn.addEventListener('click', () =>{
+	todoList.displayTodos();
+});
+
+
+// console.log("================Display Todos Object================");
+// todoList.displayTodos();
