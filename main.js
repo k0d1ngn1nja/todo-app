@@ -75,4 +75,3 @@ toggleallBtn.addEventListener('click', () =>{
 
 
 // console.log("================Display Todos Object================");
-// todoList.displayTodos();
