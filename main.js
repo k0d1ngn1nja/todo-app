@@ -58,15 +58,19 @@ let todoList = {
 			}
 		}
 			
-		// this.displayTodos();
+		this.displayTodos();
 	}
 };
 
-const displayTodosBtn = document.getElementById("displaytodoBtn");
-const toggleAllBtn = document.getElementById("toggleAllBtn");
+const displaytodosBtn = document.getElementById("displaytodoBtn");
+const toggleallBtn = document.getElementById("toggleallBtn");
 
-displayTodosBtn.addEventListener('click', () =>{
+displaytodosBtn.addEventListener('click', () =>{
 	todoList.displayTodos();
+});
+
+toggleallBtn.addEventListener('click', () =>{
+	todoList.toggleAll();
 });
 
 
