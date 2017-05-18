@@ -76,6 +76,14 @@ let handlers = {
 		let userTodoInput = document.getElementById('addTodoText');
 		todoList.addTodo(userTodoInput.value);
 		userTodoInput.value = "";
+	},
+
+	updateTodo: () =>{
+		let updatePosition = document.getElementById('updatePosition');
+		let userTodoInput = document.getElementById('addTodoText');
+		todoList.updateTodo(updatePosition.valueAsNumber, userTodoInput.value);
+		updatePosition.value = "";
+		userTodoInput.value = "";
 	}
 }
 
