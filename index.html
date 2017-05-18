@@ -12,16 +12,22 @@
 <body>
   <!-- 
 		Requirements:
-			=> There should be a display todos button and a toggleAll button in the app
-			=> Clicking displayAll todos should run todoList.displayTodos
-			=> Clicking toggleAll should run todoList.toggleAll
+			=> It should have a working control for addTodo
+			=> It should have a working control for updateTodo
+			=> It should have a working control for deleteTodo
+			=> It should have a working control for toggleCompleted
    -->
   <div class="container">
    	<div class="row">
    		<div class="col-sm-12">
-   			<div class="user-input-section">
-   				<button class="btn btn-primary" id="displaytodoBtn">Display Todos</button>
-   				<button class="btn btn-info" id="toggleallBtn">Toggle All</button>
+   			<div class="todo-btns">
+   				<button class="btn btn-primary" onclick="handlers.displayTodos()">Display Todos</button>
+   				<button class="btn btn-info" onclick="handlers.toggleAll()">Toggle All</button>
+   			</div>
+
+   			<div class="user-inputs">
+   				<input type="text" id="addTodoText" class="form-control"> <br>
+   				<button class="btn btn-primary" onclick="handlers.addTodo()">Add</button>
    			</div>
    		</div><!--/col12-->
    	</div><!--/row-->

@@ -62,16 +62,22 @@ let todoList = {
 	}
 };
 
-const displaytodosBtn = document.getElementById("displaytodoBtn");
-const toggleallBtn = document.getElementById("toggleallBtn");
 
-displaytodosBtn.addEventListener('click', () =>{
-	todoList.displayTodos();
-});
+let handlers = {
+	displayTodos: () =>{
+		todoList.displayTodos();
+	},
+	
+	toggleAll: () =>{
+		todoList.toggleAll();
+	},
 
-toggleallBtn.addEventListener('click', () =>{
-	todoList.toggleAll();
-});
+	addTodo: () =>{
+		let userTodoInput = document.getElementById('addTodoText');
+		todoList.addTodo(userTodoInput.value);
+		userTodoInput.value = "";
+	}
+}
 
 
 // console.log("================Display Todos Object================");

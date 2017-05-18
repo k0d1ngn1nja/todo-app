@@ -1,5 +1,13 @@
-.user-input-section{
+.todo-btns{
 	padding: 30px 25px;
+	float: right;
+	width: 25%;
+}
+
+.user-inputs{
+	padding: 30px 25px;
+	float: left;
+	width: 49%;
 }
 
 .btn{
