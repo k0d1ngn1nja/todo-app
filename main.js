@@ -72,10 +72,6 @@ let handlers = {
 		todoList.displayTodos();
 	},
 	
-	toggleAll: () =>{
-		todoList.toggleAll();
-	},
-
 	addTodo: () =>{
 		let userTodoInput = document.getElementById('addTodoText');
 		todoList.addTodo(userTodoInput.value);
@@ -94,7 +90,17 @@ let handlers = {
 		let position = document.getElementById('todoPosition');
 		todoList.deleteTodo(position.valueAsNumber);
 		position.value = "";
-	}	
+	},
+
+	toggleCompleted: () =>{
+		let position = document.getElementById('todoPosition');
+		todoList.toggleCompleted(position.valueAsNumber);
+		position.value = "";
+	},
+	
+	toggleAll: () =>{
+		todoList.toggleAll();
+	}
 }
 
 
