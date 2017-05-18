@@ -29,6 +29,11 @@ let todoList = {
 		this.todos[position].todoText = todoText;
 		this.displayTodos();
 	},
+
+	deleteTodo: function(position){
+		this.todos.splice(position, 1);
+		this.displayTodos();
+	},
 	
 	toggleCompleted: function(position){
 		let todo = this.todos[position];
@@ -56,8 +61,7 @@ let todoList = {
 			for(let i = 0; i < totalTodos; i++){
 				this.todos[i].completed = true;
 			}
-		}
-			
+		}			
 		this.displayTodos();
 	}
 };
@@ -79,12 +83,18 @@ let handlers = {
 	},
 
 	updateTodo: () =>{
-		let updatePosition = document.getElementById('updatePosition');
+		let position = document.getElementById('todoPosition');
 		let userTodoInput = document.getElementById('addTodoText');
 		todoList.updateTodo(updatePosition.valueAsNumber, userTodoInput.value);
 		updatePosition.value = "";
 		userTodoInput.value = "";
-	}
+	},
+
+	deleteTodo: () =>{
+		let position = document.getElementById('todoPosition');
+		todoList.deleteTodo(position.valueAsNumber);
+		position.value = "";
+	}	
 }
 
 

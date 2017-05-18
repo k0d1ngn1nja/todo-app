@@ -20,17 +20,17 @@
   <div class="container">
    	<div class="row">
    		<div class="col-sm-12">
+   			<div class="user-inputs">
+   				<input type="text" id="addTodoText" placeholder="Enter todo text">
+   				<input type="number" id="todoPosition">
+   				<button class="btn btn-primary" onclick="handlers.addTodo()">Add</button>
+   				<button class="btn btn-primary" onclick="handlers.updateTodo()">Update Todo</button>
+   				<button class="btn btn-danger" onclick="handlers.deleteTodo()">Delete</button>   				
+   			</div>
+
    			<div class="todo-btns">
    				<button class="btn btn-primary" onclick="handlers.displayTodos()">Display Todos</button>
    				<button class="btn btn-info" onclick="handlers.toggleAll()">Toggle All</button>
-   			</div>
-
-   			<div class="user-inputs">
-   				<input type="text" id="addTodoText" placeholder="Enter todo text">
-   				<input type="number" id="updatePosition">
-   				<br><br>
-   				<button class="btn btn-primary" onclick="handlers.addTodo()">Add</button>
-   				<button class="btn btn-primary" onclick="handlers.updateTodo()">Update Todo</button>
    			</div>
    		</div><!--/col12-->
    	</div><!--/row-->
