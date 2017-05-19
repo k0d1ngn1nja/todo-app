@@ -81,8 +81,8 @@ let handlers = {
 	updateTodo: () =>{
 		let position = document.getElementById('todoPosition');
 		let userTodoInput = document.getElementById('addTodoText');
-		todoList.updateTodo(updatePosition.valueAsNumber, userTodoInput.value);
-		updatePosition.value = "";
+		todoList.updateTodo(position.valueAsNumber, userTodoInput.value);
+		position.value = "";
 		userTodoInput.value = "";
 	},
 
@@ -110,26 +110,23 @@ let views = {
 		table.innerHTML = "";
 
 		for(let i = 0; i < todoList.todos.length; i++){
-			let row, cell1, cell2, newText,newText2;
+			let row, cell1, cell2, newText, newText2, todo;
 
+			todo = todoList.todos[i];
 			row 	= table.insertRow(table.rows.length-1);
 			cell1 = row.insertCell(0);
 			cell2 = row.insertCell(1);
-			newText  = document.createTextNode('New row');
-			cell1.appendChild(newText);
 
-			newText2  = document.createTextNode('2');
+			newText  = document.createTextNode(todoList.todos[i].todoText);
+			cell1.appendChild(newText);
+			
+			if(todo.completed === true){
+				cell1.style.textDecoration = "line-through";
+			}
+
+			newText2  = document.createTextNode(todoList.todos[i].completed);
 			cell2.appendChild(newText2);
 		}
 	}
 }
 // console.log("================Display Todos Object================");
-
-
-// let table = document.getElementById('mytable').getElementsByTagName('tbody')[0];
-// 			let row 	= table.insertRow(table.rows.length-1);
-// 		for(let i = 0; i < todoList.todos.length; i++){
-// 			let cell1 = row.insertCell(0);	
-// 			var newText  = document.createTextNode('New row');
-// 			cell1.appendChild(newText);
-// 		}
