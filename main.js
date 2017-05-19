@@ -104,4 +104,32 @@ let handlers = {
 }
 
 
+let views = {
+	displayTodos: () =>{
+		let table = document.getElementById('mytable').getElementsByTagName('tbody')[0];
+		table.innerHTML = "";
+
+		for(let i = 0; i < todoList.todos.length; i++){
+			let row, cell1, cell2, newText,newText2;
+
+			row 	= table.insertRow(table.rows.length-1);
+			cell1 = row.insertCell(0);
+			cell2 = row.insertCell(1);
+			newText  = document.createTextNode('New row');
+			cell1.appendChild(newText);
+
+			newText2  = document.createTextNode('2');
+			cell2.appendChild(newText2);
+		}
+	}
+}
 // console.log("================Display Todos Object================");
+
+
+// let table = document.getElementById('mytable').getElementsByTagName('tbody')[0];
+// 			let row 	= table.insertRow(table.rows.length-1);
+// 		for(let i = 0; i < todoList.todos.length; i++){
+// 			let cell1 = row.insertCell(0);	
+// 			var newText  = document.createTextNode('New row');
+// 			cell1.appendChild(newText);
+// 		}

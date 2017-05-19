@@ -12,11 +12,11 @@
 <body>
   <!-- 
 		Requirements:
-			=> It should have a working control for addTodo
-			=> It should have a working control for updateTodo
-			=> It should have a working control for deleteTodo
-			=> It should have a working control for toggleCompleted
+			=> There should be an li element for every todo
+      => Each li element should contain todoText
+      => Each li element should contain todoCompleted (Status)
    -->
+
   <div class="container">
    	<div class="row">
    		<div class="col-sm-12">
@@ -39,7 +39,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="todo-display-box">
-					<table class="table">
+					<table class="table" id="mytable">
 						<thead>
 							<tr>
 								<th>Todo</th>
@@ -47,6 +47,11 @@
 								<th>Action</th>
 							</tr>
 						</thead>
+            <tbody>
+              <tr>
+                <td></td>
+              </tr>
+            </tbody>
 					</table>
 				</div>
 			</div>
